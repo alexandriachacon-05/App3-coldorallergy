@@ -144,7 +144,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<button type="button">Results</button>
+		<button type="button" onclick='document.getElementById("Results").innerHTML = resultsText.innerHTML'>Results</button>
+		<p id="Results"></p>
+		resultsText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	</div>
 </div>		
 	
