@@ -38,7 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+	var resultText = document.getElementsByld("results");
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -144,7 +144,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-	</div>
+		<p id="results"></p>
+		
 </div>		
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
