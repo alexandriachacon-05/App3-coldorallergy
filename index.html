@@ -43,7 +43,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-
         }
 
         function coldAdd(){
@@ -54,7 +53,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    allergyPercent = (allergy_count/4) * 100
 	    coldPercent = (cold_count/4) * 100
 	    var result = document.getElementById("result")
-  </script>
+	    result.innerHTML = "Probability it is allergies= " + allergyPercent + "<br> Probability it is a cold =" +coldPercent
+	}
+</script>
 
 
 
