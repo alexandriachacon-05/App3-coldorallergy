@@ -47,12 +47,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function percentage(){
+	// Created functions to calculate allergy and cold percent
+	function percentage(){  
 	    allergyPercent = (allergy_count/4) * 100
 	    coldPercent = (cold_count/4) * 100
 	    var result = document.getElementById("result")
 	    result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
 	}
+	/*
+	The code above will change the HTML content of the paragraph element with the id "result" (on the app page with id "five") to the innerHTML showing the results (allergy percent and cold percent)
+	*/
 </script>
 
 	
@@ -102,6 +106,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black">No</a>
     	</div>
+		/*
+		The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
+		*/
 </div>
 
 <div class="page" id="two">
@@ -114,6 +121,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
+		/*
+		The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
+		*/
 </div>
 		
 <div class="page" id="three">
@@ -126,6 +136,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
+		/*
+		The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
+		*/
 </div>	
 	
 <div class="page" id="four">
@@ -138,6 +151,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
+		/*
+		The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
+		*/
 </div>	
 	
 <div class="page" id="five">
@@ -149,6 +165,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<button class="w3-button w3-black" onclick="percentage()">Calculate</button>
 		<p id="result"></p>
 	</div>
+		/*
+		The button with the HTML content "Calculate" will run the function "percentage()," which calculates the allergy percent and cold percent, and on clicking the button it also will change the the HTML content of the element with the id "result" to the innerHTML described in the script (<s>) tags
+		*/
 </div>		
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
