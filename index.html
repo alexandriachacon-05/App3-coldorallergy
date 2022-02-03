@@ -39,14 +39,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	//I declared and initilized the variables "allergy_count" and "cold_count"
+	//When either variable is called, it returns what (the value) it is equal to, which is 0 initially for both variables 
+	//Depending on what function is run ("allergyAdd()" or "coldAdd()"), the number inside the variable ("allergy_count" or "cold_count") within the function increases by one
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
         }
+	//When the "allergyAdd()" function is run, it adds one count to the "allergy_count" variable
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	//When the "coldAdd()" function is run, it adds one count to the "cold_count" variable
 	
 	function percentage(){  
 	    allergyPercent = (allergy_count/4) * 100
@@ -54,8 +59,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    var result = document.getElementById("result")
 	    result.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"
 	}
-	// Created functions to calculate allergy and cold percent
-	// The code above will change the HTML content of the paragraph element with the id "result" (on the app page with id "five") to the innerHTML showing the results (allergy percent and cold percent)
+	//Created functions to calculate allergy and cold percent
+	//The code above will change the HTML content of the paragraph element with the id "result" (on the app page with id "five") to the innerHTML showing the results (allergy percent and cold percent)
 	
 </script>
 
@@ -82,6 +87,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -108,6 +114,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 </div>
 	<!-- 
+	I created "Yes" and "No" buttons using "w3-btn" class, which adds button behavior to the HTML element "<a>"
 	On clicking the "Yes" or "No" button, the app will move to the page with the id "two"
 	The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
 	-->
@@ -124,6 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 	<!-- 
+	I created "Yes" and "No" buttons using "w3-btn" class, which adds button behavior to the HTML element "<a>"
 	On clicking the "Yes" or "No" button, the app will move to the page with the id "three"
 	The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
 	-->
@@ -140,6 +148,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 	<!-- 
+	I created "Yes" and "No" buttons using "w3-btn" class, which adds button behavior to the HTML element "<a>"
 	On clicking the "Yes" or "No" button, the app will move to the page with the id "four"
 	The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
 	-->
@@ -156,6 +165,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 	<!-- 
+	I created "Yes" and "No" buttons using "w3-btn" class, which adds button behavior to the HTML element "<a>"
 	On clicking the "Yes" or "No" button, the app will move to the page with the id "five"
 	The buttons above will run the function "allergyAdd" or "coldAdd," adding one count to allergy or cold, depending on whether the user clicks the "Yes" or "No" button
 	-->
@@ -171,6 +181,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 	<!-- 
+	I created the "Calculate" button using "w3-btn" class, which adds button behavior to the HTML element "<button>"
 	The button with the HTML content "Calculate" will run the function "percentage()," which calculates the allergy percent and cold percent
 	On clicking the button, it also will change the the HTML content of the element with the id "result" to the innerHTML described in the script (<s>) tags
 	-->
