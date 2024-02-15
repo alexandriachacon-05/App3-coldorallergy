@@ -48,6 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
   </script>
@@ -89,7 +90,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-<!-- lines 93 to 102 display Question 1 and gives user the yes/no options-->
+<!-- lines 94 to 105 displays Page for Question 1 and gives user the yes/no options-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -97,21 +98,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
 		<p>Are your eyes watery or itchy?</p> <!--I asked the question for Question 1 (Q1) here.-->  
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q1-->
-		<a href="#two" onclick="coldAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q1-->
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q1. If clicked, adds one to allergy_count-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q1. If clicked, adds one to cold_count-->
 	</div>
 
 </div>
-
+<!-- lines 107 to 117 displays Page for Question 2 and gives user the yes/no options-->
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p>Do you have a fever?</p> <!--I asked the question for Q2 here.--> 
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q2. If clicked, adds one to cold_count-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q2. If clicked, adds one to allergy_count-->
 	</div>
 </div>	
+<!-- lines 119 to 130? displays Page for Question 3 and gives user the yes/no options-->
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+
+	
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
