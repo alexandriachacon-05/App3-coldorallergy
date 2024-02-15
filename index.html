@@ -38,7 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+	var resultText = document.getElementById("results"); <!--I created a variable that contains the initial text found on the Results Page. This initial text will then be converted to the results text-->
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -51,6 +51,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert("cold_count is " + cold_count);<!--I wanted to add further clarify that the alert is displaying the count for cold_count-->
         }
 
+	function changeText(){
+	    resultText.innerHTML = "Changed text!"
+	}
+	
   </script>
 
 
@@ -142,6 +146,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot"> <!--I made the header for the results page-->
 		<h1>Results Page</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p id="results">This should be converted to the results</p> <!--This paragraph should be converted to another statement after clicking on the results page-->
+		<button onclick="changeText();">Results</button> <!--This is the Results Button. Pressing on it should change the text-->
 	</div>
 </div>	
 	
