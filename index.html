@@ -92,11 +92,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 <!-- lines 94 to 105 displays Page for Question 1 and gives user the yes/no options-->
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--lines 95-97 create the header for Q1-->
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container"> <!--lines 99-103 create the question and buttons for Q1-->
 		<p>Are your eyes watery or itchy?</p> <!--I asked the question for Question 1 (Q1) here.-->  
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q1. If clicked, adds one to allergy_count-->
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q1. If clicked, adds one to cold_count-->
@@ -105,11 +105,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 <!-- lines 107 to 117 displays Page for Question 2 and gives user the yes/no options-->
 <div class="page" id="two">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--lines 108-110 create the header for Q2-->
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!--lines 112-116 create the question and buttons for Q2-->
 		<p>Do you have a fever?</p> <!--I asked the question for Q2 here.--> 
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q2. If clicked, adds one to cold_count-->
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q2. If clicked, adds one to allergy_count-->
@@ -117,7 +117,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 <!-- lines 119 to 129 displays Page for Question 3 and gives user the yes/no options-->
 <div class="page" id="three">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--lines 120-122 create the header for Q3-->
 		<h1>Question 3</h1>
 	</div>
 
@@ -127,12 +127,23 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q3. If clicked, adds one to allergy_count-->
 	</div>
 </div>
-<!-- lines 131 to 141? displays Page for Question 4 and gives user the yes/no options-->
+<!-- lines 131 to 141 displays Page for Question 4 and gives user the yes/no options-->
 <div class="page" id="four">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--lines 132-134 create the header for Q4-->
 		<h1>Question 4</h1>
 	</div>
-	
+
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p> <!--I asked the question for Q4 here.--> 
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes </a> <!-- Create Yes button for Q4. If clicked, adds one to allergy_count-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-orange"> No </a> <!-- Create No button for Q4. If clicked, adds one to cold_count-->
+	</div>
+</div>
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot"> <!--I made the header for the results page-->
+		<h1>Results Page</h1>
+	</div>
+</div>	
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
