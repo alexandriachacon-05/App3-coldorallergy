@@ -51,9 +51,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
 
 	function resultText(){
-		
+
+	var percentcold = cold_count/4*100;
+	var percentallergy = allergy_count/4*100;
 	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+	resultText.innerHTML = "Probability it is allergies =" + percentallergy + "% <br> Probability it is a cold =" + percentcold + "%" <
 
   </script>
 	
@@ -140,8 +142,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Seasonal </a>
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> Chronic </a>
 
 	</div><!-- /content -->
 
@@ -153,10 +155,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>	
 
 	<div id="content" class="w3-container">
-
-	</div>
-		
-		<a class="w3-btn w3-black"> Click me for results! </a>
+		<p id "results">Click the button to know whether you have a cold or allergies!</p>
+		<a href="#five" onclick="resultText();" class="w3-btn w3-black"> Click me for results! </a>
 	
 	</div>
 
