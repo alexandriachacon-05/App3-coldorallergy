@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Is it a cold or allergies?</title>  
+      <title>Is it a cold or allergies?</title> <!--I changed the name of the website title from "Hello World" to something more appropriate.--> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -48,12 +48,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count);
+		alert(cold_count); 
         }
 
 	function newtext(){
 
-	var percentcold = cold_count/4*100
+	var percentcold = cold_count/4*100 
 	var percentallergy = allergy_count/4*100
 	var resultText = document.getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + percentallergy + "% <br> Probability it is a cold =" + percentcold + "%"
