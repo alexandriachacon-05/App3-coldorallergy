@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Is it a cold or allergies?</title> <!--I changed the name of the website title from "Hello World" to something more appropriate.--> 
+      <title>Is it a cold or allergies?</title> <!--/Changed name of website title from "Hello World" to something more appropriate.--> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -48,15 +48,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		alert(cold_count); 
+		alert(cold_count); //Added the alert pop up to count the cold count.
         }
 
-	function newtext(){
+	function newtext(){//Added a new function and named it "newtext" for when  text on page 5 is changed to probability text.
 
-	var percentcold = cold_count/4*100 
-	var percentallergy = allergy_count/4*100
-	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + percentallergy + "% <br> Probability it is a cold =" + percentcold + "%"
+	var percentcold = cold_count/4*100 // Created variable to keep count of cold symptoms and calculate probability percentage.
+	var percentallergy = allergy_count/4*100 // Created variable to keep count of allergy symptoms and calculate probability percentage.
+	var resultText = document.getElementById("results");//Added variable for the results content on paeg 5.
+	resultText.innerHTML = "Probability it is allergies =" + percentallergy + "% <br> Probability it is a cold =" + percentcold + "%"//This changes the results content to the final probability/diagnosis. Added percentage symbols.
 		
 	}
 	
@@ -88,85 +88,84 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-green-sea">
+<div id="header" class="w3-container w3-flat-green-sea"><!--/Changed carrot color to green sea color.-->
 	<h1>Cold or Allergies?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p><!--/Added a question mark to first sentence-->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a><!--/Clicking this button takes the participant to the next page, first question.-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-green-sea">
+<div class="page" id="one"><!--/This begins the first page, first diagnostic question-->
+	<div id="header" class="w3-container w3-flat-green-sea"><!--/Changed carrot color to green sea.-->
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-flat-nephritis">Watery</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-flat-alizarin">Itchy</a>
-	</div><!-- /content -->
+        <p>Are your eyes watery or itchy?</p>    <!--/Inserted first diagnostic question-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-flat-nephritis">Watery</a> <!--/Button takes participant to next page, second question. Button counts for allergy symptoms. Color was changed from carrot to nephritis.-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-flat-alizarin">Itchy</a><!--/Button takes participant to next page, second question. Button counts for cold symptoms. Color was changed from carrot to alizarin.-->
+	</div><!--/This division allows for separation to begin next page.-->
     
 </div>
 
-<div class="page" id="two">
-	<div class="w3-container w3-flat-green-sea">
-		<h1>Question 2</h1>
+<div class="page" id="two"><!--/This begins the second page, second diagnostic question.-->
+	<div class="w3-container w3-flat-green-sea"><!--/Changed carrot color to green sea.-->
+		<h1>Question 2</h1><!--/Inserted header for Question 2-->
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-flat-nephritis"> Yes </a>
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-flat-alizarin"> No </a>
-	</div><!-- /content -->
-</div>
+	<p>Do you have a fever?</p><!--/Inserted second diagnostic question.-->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-flat-nephritis"> Yes </a><!--/Button takes participant to next page, third question. Button counts for cold symptoms. Color was changed from carrot to nephritis.-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-flat-alizarin"> No </a><!--/Button takes participant to next page, third question. Button counts for allergy symptoms. Color was changed from carrot to alizarin.>
+	</div><!--This division break allows separation to begin next page.-->
 	
-<div class="page" id="three">
-	<div class="w3-container w3-flat-green-sea">
-		<h1>Question 3</h1>
+<div class="page" id="three"><!--/This begins the third page, third diagnostic question.-->
+	<div class="w3-container w3-flat-green-sea"><!--/Changed carrot color to green sea.-->
+		<h1>Question 3</h1><!--/Inserted header for Question 3-->
 	</div>
 
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd();" class="w3-btn w3-flat-nephritis"> Yes </a>
-		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-flat-alizarin"> No </a>
-	</div><!-- /content -->
+	<p>Do you have a sore throat?</p><!--Inserted third diagnostic questoin.-->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-flat-nephritis"> Yes </a><!--/Button takes participant to next page, fourth question. Button counts for cold symptoms. Color was changed from carrot to nephritis.-->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-flat-alizarin"> No </a><!--/Button takes participant to next page, fourth question. Button counts for allergy symptoms. Color was changed from carrot to alizarin-->
+	</div><!--/This division break allows separation to begin next page.-->
 </div>
 	
-<div class="page" id="four">
-	<div class="w3-container w3-flat-green-sea">
-		<h1>Question 4</h1>
+<div class="page" id="four"><!--/This begins the fourth page, fourth diagnostic question.-->
+	<div class="w3-container w3-flat-green-sea"><!--/Changed carrot color to green sea.-->
+		<h1>Question 4</h1><!--/Inserted header for Question 4-->
 	</div>
 
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-flat-nephritis"> Seasonal </a>
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-flat-alizarin"> Chronic </a>
+	<p>Are your symptoms seasonal or chronic?</p><!--/Inserted fourth diagnostic question.-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-flat-nephritis"> Seasonal </a><!--/Button takes participant to next page, final results Button counts for allergy symptoms. Color was changed from carrot to nephritis.-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-flat-alizarin"> Chronic </a><!--/Button takes participant to next page, final results. Button counts for cold symptoms. Color was changed from carrot to alizarin-->
 
-	</div><!-- /content -->
+	</div><!--/This division break allows separation to begin next page.-->
 
 </div>
 	
-<div class="page" id="five">
-	<div class="w3-container w3-flat-green-sea">
-		<h1>Results</h1>
+<div class="page" id="five"><!--/This begins the last page, final results.-->
+	<div class="w3-container w3-flat-green-sea"><!--Changed carrot color to green sea.-->
+		<h1>Results</h1><!--Inserted results header-->
 	</div>	
 
 	<div id="content" class="w3-container">
-		<p id="results">Click the button to know whether you have a cold or allergies!</p>
-		<a href="#five" onclick="newtext();" class="w3-btn w3-pink"> Click me for results! </a>
+		<p id="results">Click the button to know whether you have a cold or allergies!</p><!--This is the text that changes with the newtext function to become probability (results) statement.-->
+		<a href="#five" onclick="newtext();" class="w3-btn w3-pink"> Click me for results! </a><!--Clicking on button allows for the text change.-->
 	
-	</div>
+	</div><!--This concludes the pages and questionnaire.-->
 
 
 </div>
 
-<footer class="w3-bottom w3-container w3-flat-green-sea">
+<footer class="w3-bottom w3-container w3-flat-green-sea"><!--Changed carrot color to green sea.-->
 	<p>DIY!</p>
 </footer>
 
